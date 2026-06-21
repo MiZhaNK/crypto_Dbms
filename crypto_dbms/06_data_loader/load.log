@@ -1,0 +1,103 @@
+
+SQL*Loader: Release 19.0.0.0.0 - Production on Mon May 11 08:12:31 2026
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   transactions_load.ctl
+Data File:      transactions_sample.csv
+  Bad File:     load.bad
+  Discard File: load.dsc 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table TRANSACTIONS, loaded when TXN_STATUS = 0X53554343455353(character 'SUCCESS')
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+FROM_WALLET_ID                      FIRST     *   ,  O(") CHARACTER            
+TO_WALLET_ID                         NEXT     *   ,  O(") CHARACTER            
+COIN_ID                              NEXT     *   ,  O(") CHARACTER            
+AMOUNT                               NEXT     *   ,  O(") CHARACTER            
+FEE                                  NEXT     *   ,  O(") CHARACTER            
+TXN_STATUS                           NEXT     *   ,  O(") CHARACTER            
+TXN_TIMESTAMP                        NEXT     *   ,  O(") DATE YYYY-MM-DD HH24:MI:SS
+NOTES                                NEXT     *   ,  O(") CHARACTER            
+
+Record 4: Discarded - failed all WHEN clauses.
+Record 9: Discarded - failed all WHEN clauses.
+Record 19: Discarded - failed all WHEN clauses.
+Record 2: Rejected - Error on table TRANSACTIONS.
+ORA-02290: check constraint (CRYPTO_ADMIN.CK_WALLETS_BALANCE) violated
+ORA-06512: at "CRYPTO_ADMIN.TRG_UPDATE_BALANCE", line 4
+ORA-04088: error during execution of trigger 'CRYPTO_ADMIN.TRG_UPDATE_BALANCE'
+
+Record 3: Rejected - Error on table TRANSACTIONS.
+ORA-02290: check constraint (CRYPTO_ADMIN.CK_WALLETS_BALANCE) violated
+ORA-06512: at "CRYPTO_ADMIN.TRG_UPDATE_BALANCE", line 4
+ORA-04088: error during execution of trigger 'CRYPTO_ADMIN.TRG_UPDATE_BALANCE'
+
+Record 7: Rejected - Error on table TRANSACTIONS.
+ORA-02290: check constraint (CRYPTO_ADMIN.CK_WALLETS_BALANCE) violated
+ORA-06512: at "CRYPTO_ADMIN.TRG_UPDATE_BALANCE", line 4
+ORA-04088: error during execution of trigger 'CRYPTO_ADMIN.TRG_UPDATE_BALANCE'
+
+Record 10: Rejected - Error on table TRANSACTIONS.
+ORA-02290: check constraint (CRYPTO_ADMIN.CK_WALLETS_BALANCE) violated
+ORA-06512: at "CRYPTO_ADMIN.TRG_UPDATE_BALANCE", line 4
+ORA-04088: error during execution of trigger 'CRYPTO_ADMIN.TRG_UPDATE_BALANCE'
+
+Record 13: Rejected - Error on table TRANSACTIONS.
+ORA-02290: check constraint (CRYPTO_ADMIN.CK_WALLETS_BALANCE) violated
+ORA-06512: at "CRYPTO_ADMIN.TRG_UPDATE_BALANCE", line 4
+ORA-04088: error during execution of trigger 'CRYPTO_ADMIN.TRG_UPDATE_BALANCE'
+
+Record 14: Rejected - Error on table TRANSACTIONS.
+ORA-02290: check constraint (CRYPTO_ADMIN.CK_WALLETS_BALANCE) violated
+ORA-06512: at "CRYPTO_ADMIN.TRG_UPDATE_BALANCE", line 4
+ORA-04088: error during execution of trigger 'CRYPTO_ADMIN.TRG_UPDATE_BALANCE'
+
+Record 15: Rejected - Error on table TRANSACTIONS.
+ORA-02290: check constraint (CRYPTO_ADMIN.CK_WALLETS_BALANCE) violated
+ORA-06512: at "CRYPTO_ADMIN.TRG_UPDATE_BALANCE", line 4
+ORA-04088: error during execution of trigger 'CRYPTO_ADMIN.TRG_UPDATE_BALANCE'
+
+Record 18: Rejected - Error on table TRANSACTIONS.
+ORA-02290: check constraint (CRYPTO_ADMIN.CK_WALLETS_BALANCE) violated
+ORA-06512: at "CRYPTO_ADMIN.TRG_UPDATE_BALANCE", line 4
+ORA-04088: error during execution of trigger 'CRYPTO_ADMIN.TRG_UPDATE_BALANCE'
+
+Record 20: Rejected - Error on table TRANSACTIONS.
+ORA-02290: check constraint (CRYPTO_ADMIN.CK_WALLETS_BALANCE) violated
+ORA-06512: at "CRYPTO_ADMIN.TRG_UPDATE_BALANCE", line 4
+ORA-04088: error during execution of trigger 'CRYPTO_ADMIN.TRG_UPDATE_BALANCE'
+
+
+Table TRANSACTIONS:
+  8 Rows successfully loaded.
+  9 Rows not loaded due to data errors.
+  3 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 516000 bytes(250 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:            20
+Total logical records rejected:         9
+Total logical records discarded:        3
+
+Run began on Mon May 11 08:12:31 2026
+Run ended on Mon May 11 08:12:32 2026
+
+Elapsed time was:     00:00:00.59
+CPU time was:         00:00:00.06
